@@ -91,7 +91,7 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install thr project dependencies with:
+Install the project dependencies with:
 
 ```
   bundle install
