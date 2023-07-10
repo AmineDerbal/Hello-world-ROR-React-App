@@ -3,13 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchGreeting } from '../redux/message/greetingSlice';
 
 const Greeting = () => {
-  const { greeting, isFetched, isLoading, hasError } = useSelector((store) => store.greeting);
+  const {
+    greeting, isFetched, isLoading, hasError,
+  } = useSelector((store) => store.greeting);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!isFetched) {
-      console.log('fetching');
       dispatch(fetchGreeting());
     }
   }, [dispatch, isFetched]);

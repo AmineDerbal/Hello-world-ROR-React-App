@@ -32,7 +32,9 @@ const greetingSlice = createSlice({
       const isLoading = false;
       const isFetched = true;
       const greeting = action.payload;
-      return { ...state, greeting, isFetched, isLoading };
+      return {
+        ...state, greeting, isFetched, isLoading,
+      };
     });
     builder.addCase(fetchGreeting.rejected, (state) => {
       const isLoading = false;
